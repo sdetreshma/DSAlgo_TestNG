@@ -83,7 +83,12 @@
 			<scope>provided</scope>
 		</dependency>
 
-	</dependencies>
+		<dependency>
+			<groupId>project.DSAlgo</groupId>
+			<artifactId>DSAlgo_Automation</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+  </dependencies>
 	<build>
 		<plugins>
 			<plugin>

@@ -3,14 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.TC01_launch">
+      <class name="Test.TC02_Home">
         <methods>
-          <include name="setBrowser"/>
           <include name="setUp"/>
-          <include name="verifyButtonText"/>
+          <include name="setBrowser"/>
           <include name="tearDown"/>
+          <include name="verifyWarningMessageWithoutSignIn" invocation-numbers="0"/>
         </methods>
-      </class> <!-- Test.TC01_launch -->
+      </class> <!-- Test.TC02_Home -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
