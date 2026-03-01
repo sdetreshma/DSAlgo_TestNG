@@ -26,7 +26,7 @@ public class TC04_Home_withSignin extends Hooks {
 
 	@Test(dataProvider = "TabNameWithSignin", dataProviderClass = LaunchData.class)
 	public void verifyPagedetails_OnClickingTabs(String TabName, String PageHeading) {
-		ElementUtil.navigatetoHomePage();
+		ElementUtil.navigateToHomePage();
 		pom.getHomePage().clickTitlePage(TabName);
 		Assert.assertEquals(pom.getHomePage().getPageHeading(TabName), PageHeading, "Page heading mismatch");
 		logger.info("Page heading displayed: " + pom.getHomePage().getPageHeading(TabName));

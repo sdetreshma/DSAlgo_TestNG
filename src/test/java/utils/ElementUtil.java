@@ -16,8 +16,11 @@ public class ElementUtil {
 		DriverFactory.getDriver().navigate().back();
 	}
 	
-	public static void navigatetoHomePage() {
-		DriverFactory.getDriver().navigate().to("https://dsportalapp.herokuapp.com/home");
+	public static void navigateToHomePage() {
+
+	    String baseURL = ConfigReader.getProperty("baseURL");
+	    DriverFactory.getDriver().navigate().to(baseURL + "home");
+
 	}
 	
 	public static void refreshPage() {
