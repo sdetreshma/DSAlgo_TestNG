@@ -5,7 +5,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import TestPackage.HomeData;
-import TestPackage.LaunchData;
 import utils.ElementUtil;
 
 @Test(groups = "Get Started")
@@ -20,16 +19,16 @@ public class TC02_Home extends Hooks {
 	@Test(dataProvider = "LinkName", dataProviderClass = HomeData.class)
 	public void verifyLinkNames(String linkName) {
 		Assert.assertEquals(pom.getHomePage().getLinkName(linkName), linkName, "Link name mismatch");
-		logger.info("Link name displayed: " + pom.getHomePage().getLinkName(linkName));
+        logger.info("Link name displayed: {}", pom.getHomePage().getLinkName(linkName));
 	}
 	
 	@Test(dataProvider = "OptionName", dataProviderClass = HomeData.class)
 	public void verifyDropdownOptions(List<String> expectedOptions) {
 		pom.getHomePage().clickDataStructureDropdown();
-		logger.info("Expected dropdown options: " + expectedOptions);
+        logger.info("Expected dropdown options: {}", expectedOptions);
 
 		List<String> actualOptions = pom.getHomePage().getDataStructureOptionsText();
-		logger.info("Actual dropdown options: " + actualOptions);
+        logger.info("Actual dropdown options: {}", actualOptions);
 
 		Assert.assertEquals(actualOptions, expectedOptions, "Dropdown options mismatch");
 	
@@ -40,15 +39,17 @@ public class TC02_Home extends Hooks {
 		ElementUtil.refreshPage();
 		pom.getHomePage().selectOption(Option);
 		Assert.assertEquals(pom.getHomePage().getErrMsg(), "You are not logged in", "Warning message mismatch");
-		logger.info("Warning message displayed: " + pom.getHomePage().getErrMsg());
+        logger.info("Warning message displayed while selecting the DS: {}", pom.getHomePage().getErrMsg());
 
 	}
 	
-	@Test(dataProvider = "TabNameWithoutSignIn", dataProviderClass = HomeData.class)
+	@Test(dataProvider = "getTabName", dataProviderClass = HomeData.class)
 	public void verifyWarningMessageWithoutSignIn_Tabs(String TabName) {
 		pom.getHomePage().clickTitlePage(TabName);
 		Assert.assertEquals(pom.getHomePage().getErrMsg(), "You are not logged in", "Warning message mismatch");
-		logger.info("Warning message displayed: " + pom.getHomePage().getErrMsg());
+        logger.info("Warning message displayed: {}", pom.getHomePage().getErrMsg());
 	}
+
+
 
 }

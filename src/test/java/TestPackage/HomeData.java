@@ -21,14 +21,9 @@ public class HomeData {
 		return new Object[][] { { "Arrays" }, { "Linked List" }, { "Stack" }, { "Queue" }, { "Tree" }, { "Graph" } };
 	}
 	
-	@DataProvider(name = "TabNameWithoutSignIn")
-	public Object[][] getTanNameWithoutSignIn() {
+	@DataProvider(name = "TabName")
+	public Object[][] getTabName() {
 		return new Object[][] { { "Array" }, { "Linked List" }, { "Stack" }, { "Queue" }, { "Tree" }, { "Graph" }, { "Data Structures-Introduction" }};
-	}
-	
-	@DataProvider(name = "HomeLinkText")
-	public Object[][] getHomeLinkText() {
-		return new Object[][] { { "ValidUser" }, { "Sign out" } };
 	}
 	
 	@DataProvider(name = "HomeOptionsWithSignin")
@@ -37,11 +32,5 @@ public class HomeData {
 			{ "Graph", "Graph" } };
 	}
 	
-	@DataProvider(name = "TabNameWithSignin")
-	public Object[][] getTabNameWithSignin() {
-		return new Object[][] { { "Array", "Array" }, { "Linked List", "Linked List" }, { "Stack", "Stack" }, { "Queue", "Queue" }, { "Tree", "Tree" }, 
-			{ "Graph", "Graph" }, { "Data Structures-Introduction", "Data Structures-Introduction" } };
-	}
-
 
 }
