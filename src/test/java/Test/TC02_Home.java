@@ -4,6 +4,7 @@ import java.util.List;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import TestPackage.HomeData;
 import TestPackage.LaunchData;
 import utils.ElementUtil;
 
@@ -16,13 +17,13 @@ public class TC02_Home extends Hooks {
 		Assert.assertEquals(pom.getHomePage().getCompanyName(), "NumpyNinja", "Company name mismatch");
 	}
 	
-	@Test(dataProvider = "LinkName", dataProviderClass = LaunchData.class)
+	@Test(dataProvider = "LinkName", dataProviderClass = HomeData.class)
 	public void verifyLinkNames(String linkName) {
 		Assert.assertEquals(pom.getHomePage().getLinkName(linkName), linkName, "Link name mismatch");
 		logger.info("Link name displayed: " + pom.getHomePage().getLinkName(linkName));
 	}
 	
-	@Test(dataProvider = "OptionName", dataProviderClass = LaunchData.class)
+	@Test(dataProvider = "OptionName", dataProviderClass = HomeData.class)
 	public void verifyDropdownOptions(List<String> expectedOptions) {
 		pom.getHomePage().clickDataStructureDropdown();
 		logger.info("Expected dropdown options: " + expectedOptions);
@@ -34,7 +35,7 @@ public class TC02_Home extends Hooks {
 	
 	}
 	
-	@Test(dataProvider = "OptionsWithoutSignIn", dataProviderClass = LaunchData.class)
+	@Test(dataProvider = "OptionsWithoutSignIn", dataProviderClass = HomeData.class)
 	public void verifyWarningMessageWithoutSignIn(String Option) {
 		ElementUtil.refreshPage();
 		pom.getHomePage().selectOption(Option);
@@ -43,7 +44,7 @@ public class TC02_Home extends Hooks {
 
 	}
 	
-	@Test(dataProvider = "TabNameWithoutSignIn", dataProviderClass = LaunchData.class)
+	@Test(dataProvider = "TabNameWithoutSignIn", dataProviderClass = HomeData.class)
 	public void verifyWarningMessageWithoutSignIn_Tabs(String TabName) {
 		pom.getHomePage().clickTitlePage(TabName);
 		Assert.assertEquals(pom.getHomePage().getErrMsg(), "You are not logged in", "Warning message mismatch");

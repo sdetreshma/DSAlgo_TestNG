@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-01T15:25:57 IST" name="Default suite" finished-at="2026-03-01T15:26:20 IST" duration-ms="23207">
+  <suite started-at="2026-03-01T19:02:56 IST" name="Default suite" finished-at="2026-03-01T19:03:07 IST" duration-ms="10600">
     <groups>
       <group name="Get Started">
-        <method signature="TC02_Home.verifyCompanyName()[pri:0, instance:Test.TC02_Home@7561db12]" name="verifyCompanyName" class="Test.TC02_Home"/>
-        <method signature="TC02_Home.verifyDropdownOptions(java.util.List)[pri:0, instance:Test.TC02_Home@7561db12]" name="verifyDropdownOptions" class="Test.TC02_Home"/>
-        <method signature="TC02_Home.verifyLinkNames(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" name="verifyLinkNames" class="Test.TC02_Home"/>
-        <method signature="TC02_Home.verifyWarningMessageWithoutSignIn(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" name="verifyWarningMessageWithoutSignIn" class="Test.TC02_Home"/>
-        <method signature="TC02_Home.verifyWarningMessageWithoutSignIn_Tabs(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" name="verifyWarningMessageWithoutSignIn_Tabs" class="Test.TC02_Home"/>
+        <method signature="TC06_DataStructures.navigateToDataStructuresPage()[pri:0, instance:Test.TC06_DataStructures@3301500b]" name="navigateToDataStructuresPage" class="Test.TC06_DataStructures"/>
+        <method signature="TC06_DataStructures.verifyStaticContent(java.lang.String)[pri:0, instance:Test.TC06_DataStructures@3301500b]" name="verifyStaticContent" class="Test.TC06_DataStructures"/>
+        <method signature="TC06_DataStructures.navigateToTimeComplexityPage()[pri:0, instance:Test.TC06_DataStructures@3301500b]" name="navigateToTimeComplexityPage" class="Test.TC06_DataStructures"/>
+        <method signature="TC06_DataStructures.verifyTryHereButtonVisibility()[pri:0, instance:Test.TC06_DataStructures@3301500b]" name="verifyTryHereButtonVisibility" class="Test.TC06_DataStructures"/>
       </group> <!-- Get Started -->
+      <group name="Sign in">
+        <method signature="TC06_DataStructures.navigateToDataStructuresPage()[pri:0, instance:Test.TC06_DataStructures@3301500b]" name="navigateToDataStructuresPage" class="Test.TC06_DataStructures"/>
+        <method signature="TC06_DataStructures.verifyStaticContent(java.lang.String)[pri:0, instance:Test.TC06_DataStructures@3301500b]" name="verifyStaticContent" class="Test.TC06_DataStructures"/>
+        <method signature="TC06_DataStructures.navigateToTimeComplexityPage()[pri:0, instance:Test.TC06_DataStructures@3301500b]" name="navigateToTimeComplexityPage" class="Test.TC06_DataStructures"/>
+        <method signature="TC06_DataStructures.verifyTryHereButtonVisibility()[pri:0, instance:Test.TC06_DataStructures@3301500b]" name="verifyTryHereButtonVisibility" class="Test.TC06_DataStructures"/>
+      </group> <!-- Sign in -->
     </groups>
-    <test started-at="2026-03-01T15:25:57 IST" name="Default test" finished-at="2026-03-01T15:26:20 IST" duration-ms="23207">
-      <class name="Test.TC02_Home">
-        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:25:56 IST" name="setBrowser" finished-at="2026-03-01T15:25:57 IST" duration-ms="1219" status="PASS">
+    <test started-at="2026-03-01T19:02:56 IST" name="Default test" finished-at="2026-03-01T19:03:07 IST" duration-ms="10600">
+      <class name="Test.TC06_DataStructures">
+        <test-method is-config="true" signature="setBrowser(java.lang.String)[pri:0, instance:Test.TC06_DataStructures@3301500b]" started-at="2026-03-01T19:02:55 IST" name="setBrowser" finished-at="2026-03-01T19:02:56 IST" duration-ms="1216" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -25,180 +30,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setBrowser -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:25:57 IST" name="setUp" finished-at="2026-03-01T15:26:05 IST" duration-ms="7498" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Test.TC06_DataStructures@3301500b]" started-at="2026-03-01T19:02:56 IST" name="setUp" finished-at="2026-03-01T19:03:04 IST" duration-ms="8084" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyCompanyName()[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:05 IST" name="verifyCompanyName" finished-at="2026-03-01T15:26:05 IST" duration-ms="171" status="PASS">
+        <test-method signature="navigateToDataStructuresPage()[pri:0, instance:Test.TC06_DataStructures@3301500b]" started-at="2026-03-01T19:03:04 IST" name="navigateToDataStructuresPage" finished-at="2026-03-01T19:03:05 IST" duration-ms="857" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyCompanyName -->
-        <test-method signature="verifyDropdownOptions(java.util.List)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:05 IST" name="verifyDropdownOptions" data-provider="OptionName" finished-at="2026-03-01T15:26:05 IST" duration-ms="333" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Arrays, Linked List, Stack, Queue, Tree, Graph]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyDropdownOptions -->
-        <test-method signature="verifyLinkNames(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:05 IST" name="verifyLinkNames" data-provider="LinkName" finished-at="2026-03-01T15:26:05 IST" duration-ms="101" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Register]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLinkNames -->
-        <test-method signature="verifyLinkNames(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:05 IST" name="verifyLinkNames" data-provider="LinkName" finished-at="2026-03-01T15:26:05 IST" duration-ms="111" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Sign in]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLinkNames -->
-        <test-method signature="verifyWarningMessageWithoutSignIn(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:05 IST" name="verifyWarningMessageWithoutSignIn" data-provider="OptionsWithoutSignIn" finished-at="2026-03-01T15:26:07 IST" duration-ms="1398" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Arrays]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn -->
-        <test-method signature="verifyWarningMessageWithoutSignIn(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:07 IST" name="verifyWarningMessageWithoutSignIn" data-provider="OptionsWithoutSignIn" finished-at="2026-03-01T15:26:08 IST" duration-ms="1339" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Linked List]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn -->
-        <test-method signature="verifyWarningMessageWithoutSignIn(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:08 IST" name="verifyWarningMessageWithoutSignIn" data-provider="OptionsWithoutSignIn" finished-at="2026-03-01T15:26:09 IST" duration-ms="1357" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Stack]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn -->
-        <test-method signature="verifyWarningMessageWithoutSignIn(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:09 IST" name="verifyWarningMessageWithoutSignIn" data-provider="OptionsWithoutSignIn" finished-at="2026-03-01T15:26:11 IST" duration-ms="1341" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Queue]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn -->
-        <test-method signature="verifyWarningMessageWithoutSignIn(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:11 IST" name="verifyWarningMessageWithoutSignIn" data-provider="OptionsWithoutSignIn" finished-at="2026-03-01T15:26:12 IST" duration-ms="1372" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tree]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn -->
-        <test-method signature="verifyWarningMessageWithoutSignIn(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:12 IST" name="verifyWarningMessageWithoutSignIn" data-provider="OptionsWithoutSignIn" finished-at="2026-03-01T15:26:14 IST" duration-ms="1421" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Graph]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn -->
-        <test-method signature="verifyWarningMessageWithoutSignIn_Tabs(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:14 IST" name="verifyWarningMessageWithoutSignIn_Tabs" data-provider="TabNameWithoutSignIn" finished-at="2026-03-01T15:26:14 IST" duration-ms="804" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Array]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn_Tabs -->
-        <test-method signature="verifyWarningMessageWithoutSignIn_Tabs(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:14 IST" name="verifyWarningMessageWithoutSignIn_Tabs" data-provider="TabNameWithoutSignIn" finished-at="2026-03-01T15:26:15 IST" duration-ms="801" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Linked List]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn_Tabs -->
-        <test-method signature="verifyWarningMessageWithoutSignIn_Tabs(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:15 IST" name="verifyWarningMessageWithoutSignIn_Tabs" data-provider="TabNameWithoutSignIn" finished-at="2026-03-01T15:26:16 IST" duration-ms="979" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Stack]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn_Tabs -->
-        <test-method signature="verifyWarningMessageWithoutSignIn_Tabs(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:16 IST" name="verifyWarningMessageWithoutSignIn_Tabs" data-provider="TabNameWithoutSignIn" finished-at="2026-03-01T15:26:17 IST" duration-ms="846" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Queue]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn_Tabs -->
-        <test-method signature="verifyWarningMessageWithoutSignIn_Tabs(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:17 IST" name="verifyWarningMessageWithoutSignIn_Tabs" data-provider="TabNameWithoutSignIn" finished-at="2026-03-01T15:26:18 IST" duration-ms="893" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Tree]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn_Tabs -->
-        <test-method signature="verifyWarningMessageWithoutSignIn_Tabs(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:18 IST" name="verifyWarningMessageWithoutSignIn_Tabs" data-provider="TabNameWithoutSignIn" finished-at="2026-03-01T15:26:19 IST" duration-ms="900" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Graph]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn_Tabs -->
-        <test-method signature="verifyWarningMessageWithoutSignIn_Tabs(java.lang.String)[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:19 IST" name="verifyWarningMessageWithoutSignIn_Tabs" data-provider="TabNameWithoutSignIn" finished-at="2026-03-01T15:26:20 IST" duration-ms="964" status="PASS">
+        </test-method> <!-- navigateToDataStructuresPage -->
+        <test-method signature="verifyStaticContent(java.lang.String)[pri:0, instance:Test.TC06_DataStructures@3301500b]" started-at="2026-03-01T19:03:05 IST" name="verifyStaticContent" data-provider="StaticContent" finished-at="2026-03-01T19:03:05 IST" duration-ms="121" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -208,12 +48,31 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyWarningMessageWithoutSignIn_Tabs -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.TC02_Home@7561db12]" started-at="2026-03-01T15:26:20 IST" name="tearDown" finished-at="2026-03-01T15:26:20 IST" duration-ms="417" status="PASS">
+        </test-method> <!-- verifyStaticContent -->
+        <test-method signature="verifyStaticContent(java.lang.String)[pri:0, instance:Test.TC06_DataStructures@3301500b]" started-at="2026-03-01T19:03:05 IST" name="verifyStaticContent" data-provider="StaticContent" finished-at="2026-03-01T19:03:05 IST" duration-ms="122" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Topics Covered]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyStaticContent -->
+        <test-method signature="navigateToTimeComplexityPage()[pri:0, instance:Test.TC06_DataStructures@3301500b]" started-at="2026-03-01T19:03:05 IST" name="navigateToTimeComplexityPage" finished-at="2026-03-01T19:03:06 IST" depends-on-methods="Test.TC06_DataStructures.verifyStaticContent" duration-ms="852" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToTimeComplexityPage -->
+        <test-method signature="verifyTryHereButtonVisibility()[pri:0, instance:Test.TC06_DataStructures@3301500b]" started-at="2026-03-01T19:03:06 IST" name="verifyTryHereButtonVisibility" finished-at="2026-03-01T19:03:06 IST" depends-on-methods="Test.TC06_DataStructures.navigateToTimeComplexityPage" duration-ms="38" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTryHereButtonVisibility -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.TC06_DataStructures@3301500b]" started-at="2026-03-01T19:03:06 IST" name="tearDown" finished-at="2026-03-01T19:03:07 IST" duration-ms="403" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Test.TC02_Home -->
+      </class> <!-- Test.TC06_DataStructures -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
