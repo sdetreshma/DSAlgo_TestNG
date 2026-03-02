@@ -3,20 +3,21 @@ package Test;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import TestPackage.HomeData;
 import TestPackage.LaunchData;
 import utils.ElementUtil;
 
 @Test(groups = { "Get Started", "Sign in" })
 public class TC04_Home_withSignin extends Hooks {
 	
-	@Test(dataProvider = "HomeLinkText", dataProviderClass = LaunchData.class)
+	@Test(dataProvider = "HomeLinkText", dataProviderClass = HomeData.class)
 	public void verifyHomeLinkText(String Links) {
 		Assert.assertEquals(pom.getHomePage().getRightCornerLink(Links), Links, "Link name mismatch");
 		logger.info("Link name displayed: " + pom.getHomePage().getRightCornerLink(Links));
 	
 	}
 	
-	@Test(dataProvider = "HomeOptionsWithSignin", dataProviderClass = LaunchData.class)
+	@Test(dataProvider = "HomeOptionsWithSignin", dataProviderClass = HomeData.class)
 	public void verifyPagedetails_OnClickingOptions(String OptionName, String PageHeading) {
 		pom.getHomePage().selectOption(OptionName);
 		Assert.assertEquals(pom.getHomePage().getPageHeading(OptionName), PageHeading, "Page heading mismatch");
@@ -24,7 +25,7 @@ public class TC04_Home_withSignin extends Hooks {
 		
 	}	
 
-	@Test(dataProvider = "TabNameWithSignin", dataProviderClass = LaunchData.class)
+	@Test(dataProvider = "TabNameWithSignin", dataProviderClass = HomeData.class)
 	public void verifyPagedetails_OnClickingTabs(String TabName, String PageHeading) {
 		ElementUtil.navigateToHomePage();
 		pom.getHomePage().clickTitlePage(TabName);

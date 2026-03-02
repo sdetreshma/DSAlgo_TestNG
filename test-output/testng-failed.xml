@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.TC06_DataStructures">
+      <class name="Test.TC04_Home_withSignin">
         <methods>
           <include name="setUp"/>
           <include name="setBrowser"/>
+          <include name="verifyHomeLinkText"/>
           <include name="tearDown"/>
-          <include name="verifyTryHereButtonVisibility"/>
+          <include name="verifyPagedetails_OnClickingOptions"/>
+          <include name="verifyPagedetails_OnClickingTabs"/>
         </methods>
-      </class> <!-- Test.TC06_DataStructures -->
+      </class> <!-- Test.TC04_Home_withSignin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
