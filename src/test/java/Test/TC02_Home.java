@@ -34,16 +34,26 @@ public class TC02_Home extends Hooks {
 	
 	}
 	
-	@Test(dataProvider = "OptionsWithoutSignIn", dataProviderClass = HomeData.class)
-	public void verifyWarningMessageWithoutSignIn(String Option) {
+	@Test(dataProvider = "TabName", dataProviderClass = HomeData.class)
+	public void verifyWarningMessageWithoutSignIn(String OptionName) {
 		ElementUtil.refreshPage();
-		pom.getHomePage().selectOption(Option);
-		Assert.assertEquals(pom.getHomePage().getErrMsg(), "You are not logged in", "Warning message mismatch");
-        logger.info("Warning message displayed while selecting the DS: {}", pom.getHomePage().getErrMsg());
+		String selectCard = null;
+		if(OptionName.equalsIgnoreCase("Data Structures-Introduction")){
+			logger.info("Selection for DS : {} is not possible",OptionName);
+		}else {
+			if (OptionName.contains("Array")) {
+				selectCard = OptionName + "s";
+			} else {
+				selectCard = OptionName;
+			}
+			pom.getHomePage().selectOption(selectCard);
 
+			Assert.assertEquals(pom.getHomePage().getErrMsg(), "You are not logged in", "Warning message mismatch");
+			logger.info("Warning message displayed while selecting the DS: {}", pom.getHomePage().getErrMsg());
+		}
 	}
 	
-	@Test(dataProvider = "getTabName", dataProviderClass = HomeData.class)
+	@Test(dataProvider = "TabName", dataProviderClass = HomeData.class)
 	public void verifyWarningMessageWithoutSignIn_Tabs(String TabName) {
 		pom.getHomePage().clickTitlePage(TabName);
 		Assert.assertEquals(pom.getHomePage().getErrMsg(), "You are not logged in", "Warning message mismatch");
