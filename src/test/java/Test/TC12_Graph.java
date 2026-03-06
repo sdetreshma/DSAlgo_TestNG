@@ -20,6 +20,11 @@ public class TC12_Graph extends Hooks {
 	public void clickGraphButton(Method method) {
 		logger.info("Clicking Graph link in home page");
 		pom.getHomePage().clickGetStarted("Graph");
+		Test testAnnotation = method.getAnnotation(Test.class);
+		List<String> groupList = Arrays.asList(testAnnotation.groups());
+		if (groupList.contains("Graph")) {
+			pom.getGraphPage().clickTopicLink("Graph");
+		}
 	}
 
 	@Test(priority = 1)
@@ -32,7 +37,7 @@ public class TC12_Graph extends Hooks {
 
 	@Test(priority = 2, dataProvider = "StaticContent", dataProviderClass = GraphData.class)
 	public void verifyStaticContent(String expectedText) {
-		List<String> headings = pom.getDataStructurePage().getheadingtext();
+		List<String> headings = pom.getGraphPage().getheadingtext();
 		System.out.println("Headings: " + headings);
 		logger.info("Headings: {}", headings);
 		boolean found = false;
@@ -46,7 +51,7 @@ public class TC12_Graph extends Hooks {
 		Assert.assertTrue(found, "Expected text '" + expectedText + "' not found in the headings: " + headings);
 	}
 
-	@Test(priority = 3, dataProvider = "SubtopicLink", dataProviderClass = GraphData.class, groups = "Graph")
+	@Test(priority = 3, dataProvider = "SubtopicLink", dataProviderClass = GraphData.class)
 	public void verifySubtopic_Link(String expectedSubtopics) {
 
 		List<String> actualSubtopics = pom.getGraphPage().subtopiclinks();
@@ -54,12 +59,12 @@ public class TC12_Graph extends Hooks {
 
 		logger.info("Expected Subtopic links in Graph page: " + expectedSubtopics);
 
-		Assert.assertEquals(actualSubtopics.contains(expectedSubtopics), true,
-				"Mismatch in subtopic link texts in Graph page: " + expectedSubtopics.toString());
-
+		Assert.assertTrue(actualSubtopics.contains(expectedSubtopics),
+				"Mismatch in subtopic link texts in Graph page: " + expectedSubtopics);
+		ElementUtil.navigateBack();
 	}
 
-	@Test(priority = 4, dataProvider = "SubtopicLinks", dataProviderClass = GraphData.class, groups = "Graph")
+	@Test(priority = 4, dataProvider = "SubtopicLinks", dataProviderClass = GraphData.class)
 	public void navigateToSubTopicPage(String topicUrl, String pageurltext) {
 		System.out.println("In test pripr 3");
 		System.out.println("Current URL before click: " + ElementUtil.getURL());
@@ -68,38 +73,38 @@ public class TC12_Graph extends Hooks {
 		String expected = pageurltext.toLowerCase().replace(" ", "-");
 		Assert.assertTrue(ElementUtil.getURL().contains(expected),
 				"URL does not contain expected text: " + pageurltext);
-		// ElementUtil.navigateBack();
+		ElementUtil.navigateBack();
 	}
 
-	@Test(priority = 5, dataProvider = "SubtopicLink", dataProviderClass = GraphData.class, groups = "Graph")
-	public void verifyTryHereButtonVisibility(String topicUrl) {
-		pom.getGraphPage().clickTopicLink(topicUrl);
-		logger.info("START: Verifying Try Here button visibility for topic: {}", topicUrl);
+	@Test(priority = 5, groups = "Graph")
+	public void verifyTryHereButtonVisibility() {
+		logger.info("Checking Try Here button visibility for Graph page");
 
 		boolean isDisplayed = pom.getGraphPage().checktryherebutton_displayed();
-		logger.info("Try Here button displayed status: {}", isDisplayed);
-
-		Assert.assertTrue(isDisplayed, "Try Here button is not visible in the '" + topicUrl + "' content");
-
-		logger.info("END: Try Here button visibility verified successfully for topic: {}", topicUrl);
-		// ElementUtil.navigateBack();
+		if (!isDisplayed) {
+			logger.error("Try Here button is not visible on Time Complexity page");
+		}
+		{
+			Assert.assertTrue(isDisplayed, "Try Here button is not visible on Graph page");
+			logger.info("Verified Try Here button is visible on Graph page");
+		}
 	}
 
 	@Test(priority = 6, groups = "Graph")
 	public void navigateToTryEditorPage() {
-		pom.getGraphPage().clickTopicLink("Graph");
 		pom.getGraphPage().clickTryHereButton();
 		Assert.assertTrue(ElementUtil.getURL().contains("tryEditor"), "user is not on tryeditor screen");
 		logger.info("User is on the Try Editor page after clicking Try Here button");
+
 	}
 
 	@Test(priority = 7, groups = "Graph")
 	public void navigateToPracticeQuestionsLink() {
 		pom.getGraphPage().clickTopicLink("Graph");
-		pom.getDataStructurePage().clickPracticeQuestionsLink();
-		List<String> questions = pom.getDataStructurePage().getQuestionsList();
+		pom.getGraphPage().clickPracticeQuestionsLink();
+		List<String> questions = pom.getGraphPage().getQuestionsList();
 		Assert.assertFalse(questions.isEmpty(),
-				"No questions are displayed in Practice Questions section of DataStructures module");
+				"No questions are displayed in Practice Questions section of Graph module");
 	}
 
 	@AfterMethod
