@@ -66,8 +66,6 @@ public class TC12_Graph extends Hooks {
 
 	@Test(priority = 4, dataProvider = "SubtopicLinks", dataProviderClass = GraphData.class)
 	public void navigateToSubTopicPage(String topicUrl, String pageurltext) {
-		System.out.println("In test pripr 3");
-		System.out.println("Current URL before click: " + ElementUtil.getURL());
 		pom.getGraphPage().clickTopicLink(topicUrl);
 		logger.info("Current page title: {}", ElementUtil.getTitle());
 		String expected = pageurltext.toLowerCase().replace(" ", "-");
@@ -82,7 +80,7 @@ public class TC12_Graph extends Hooks {
 
 		boolean isDisplayed = pom.getGraphPage().checktryherebutton_displayed();
 		if (!isDisplayed) {
-			logger.error("Try Here button is not visible on Time Complexity page");
+			logger.error("Try Here button is not visible on Graph page");
 		}
 		{
 			Assert.assertTrue(isDisplayed, "Try Here button is not visible on Graph page");
@@ -100,7 +98,6 @@ public class TC12_Graph extends Hooks {
 
 	@Test(priority = 7, groups = "Graph")
 	public void navigateToPracticeQuestionsLink() {
-		pom.getGraphPage().clickTopicLink("Graph");
 		pom.getGraphPage().clickPracticeQuestionsLink();
 		List<String> questions = pom.getGraphPage().getQuestionsList();
 		Assert.assertFalse(questions.isEmpty(),
