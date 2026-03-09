@@ -2,10 +2,12 @@ package utils;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import DriverManager.DriverFactory;
 import pages.ArrayPage;
 
 
@@ -32,6 +34,12 @@ public class Listener implements ITestListener{
 	        logger.error("TEST FAILED : '{}' | Reason: {}",
 	            result.getName(),
 	            result.getThrowable().getMessage());
+	        logger.info("Failed: {} " , result.getName());
+			String testName = result.getName();
+		    WebDriver driver = DriverFactory.getDriver();
+
+		    String screenshotPath = ScreenShot.takeScreenshot(driver, testName);
+		    logger.info("Screenshot saved at: {}" , screenshotPath);
 	    }
 	 
 	 @Override

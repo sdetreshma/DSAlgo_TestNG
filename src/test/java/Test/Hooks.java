@@ -32,7 +32,7 @@ public class Hooks {
 		logger.info("Before Suite : set Browser : {}", browserName);
 		DriverFactory.setBrowser(browserName);
 
-		pom = new PageObjectManager();
+		//pom = new PageObjectManager();
 
 	    prop = ConfigReader.initializeProperties();
 		logger.debug("Loaded configuration properties");
@@ -47,6 +47,9 @@ public class Hooks {
 	public void setUp() {
 		logger.info("Before Class : Initialize Browser ");
 		DriverFactory.launchBrowser();
+		
+		pom = new PageObjectManager();
+        logger.info("POM initialized");
 
 		Test testAnnotationTest = getClass().getAnnotation(Test.class);
 
