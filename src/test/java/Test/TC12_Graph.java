@@ -61,7 +61,6 @@ public class TC12_Graph extends Hooks {
 
 		Assert.assertTrue(actualSubtopics.contains(expectedSubtopics),
 				"Mismatch in subtopic link texts in Graph page: " + expectedSubtopics);
-		ElementUtil.navigateBack();
 	}
 
 	@Test(priority = 4, dataProvider = "SubtopicLinks", dataProviderClass = GraphData.class)
